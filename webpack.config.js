@@ -1,3 +1,5 @@
+var path = require('path')
+
 module.exports = {
   // eslint-disable-line no-undef
   entry: "./src/index.tsx",
@@ -18,4 +20,9 @@ module.exports = {
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".jsx"],
   },
+ devServer: {
+  contentBase: path.join(__dirname, 'dist'),
+  compress: true,
+  port: 8080
+}
 };
